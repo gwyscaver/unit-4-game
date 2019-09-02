@@ -1,11 +1,12 @@
 var tarScore = 0
 var wins = 0
 var losses = 0
-var redGem
-var blueGem
-var yellGem
-var greenGem
 var currScore = 0
+
+var blueGem
+var redGem
+var greenGem
+var yellGem
 
 function genGemScore(){
     var randomNumber = Math.random()*12
@@ -15,30 +16,76 @@ function genTarScore(){
     var randomNumber = Math.random()*120
     return Math.floor(randomNumber)
 }
+//checks currScore against tarScore
+function checkScore(){
+    if (currScore == tarScore){
+        wins ++
+        resetGame()
+        updateHtml()
+    }
+    if (currScore > tarScore) {
+      console.log("you've lost")
+      losses ++
+      resetGame()
+      updateHtml()
+    } //else {
+        //console.log("keep guessing")
+
+    //}
+}
+//update the html
+function updateHtml(){
+    $("#tarScore").text("Target Score:" + tarScore)
+    $("#currScore").text("Current Score:" + currScore)
+    $("#losses").text("Losses:" + losses)
+    $("#wins").text("Wins:" + wins)
+}
+//rest game
+function resetGame(){
+    currScore = 0
+    tarScore = genTarScore()
+}
+
+
 redGem = genGemScore()
 blueGem = genGemScore()
 yellGem = genGemScore()
 greenGem = genGemScore()
 tarScore = genTarScore()
-console.log(redGem,blueGem,yellGem,greenGem);
-console.log(tarScore)
+updateHtml()
 
-$(".blueGem").on("click", function (){
-    console.log("blue gem was clicked")
-    console.log(blueGem)
-    currScore = currScore + blueGem
-    console.log(currScore);
-    
-})
-$(".redGem").on("click", function (){
-    console.log("red gem was clicked")
-    
-    })
-$(".greenGem").on("click", function (){
-    console.log("green gem was clicked")
+//log(redGem,blueGem,yellGem,greenGem);
+//log(tarScore)
 
+$("#blueGem").on("click", function (){
+    //log("blue gem was clicked")
+    //log(blueGem)
+    currScore = currScore + blueGem;
+    //log(currScore);
+    checkScore();
+    updateHtml()   
 })
-$(".yellGem").on("click", function (){
-    console.log("yellow gem was clicked")
-    
-    })
+$("#redGem").on("click", function (){
+    //log("red gem was clicked")
+    //log(redGem)
+    currScore = currScore + redGem;
+    //log(currScore);
+    checkScore();
+    updateHtml()   
+})
+$("#greenGem").on("click", function (){
+    //log("green gem was clicked")
+    //log(greenGem)
+    currScore = currScore + greenGem;
+    //log(currScore);
+    checkScore();
+    updateHtml()   
+})
+$("#yellGem").on("click", function (){
+    //console.log("yellow gem was clicked")
+    //console.log(yellGem)
+    currScore = currScore + yellGem;
+    //console.log(currScore);
+    checkScore();
+    updateHtml()   
+})
