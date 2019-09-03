@@ -6,7 +6,7 @@ var currScore = 0
 var blueGem
 var redGem
 var greenGem
-var yellGem
+var purpGem
 
 function genGemScore(){
     var randomNumber = Math.random()*12
@@ -49,12 +49,12 @@ function resetGame(){
 
 redGem = genGemScore()
 blueGem = genGemScore()
-yellGem = genGemScore()
+purpGem = genGemScore()
 greenGem = genGemScore()
 tarScore = genTarScore()
 updateHtml()
 
-//log(redGem,blueGem,yellGem,greenGem);
+//log(redGem,blueGem,purpGem,greenGem);
 //log(tarScore)
 
 $("#blueGem").on("click", function (){
@@ -81,10 +81,10 @@ $("#greenGem").on("click", function (){
     checkScore();
     updateHtml()   
 })
-$("#yellGem").on("click", function (){
-    //console.log("yellow gem was clicked")
-    //console.log(yellGem)
-    currScore = currScore + yellGem;
+$("#purpGem").on("click", function (){
+    //console.log("purp gem was clicked")
+    //console.log(purpGem)
+    currScore = currScore + purpGem;
     //console.log(currScore);
     checkScore();
     updateHtml()   
