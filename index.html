@@ -43,17 +43,17 @@
           </button>
         </div>
         <div class="modal-body">
-          1) You will be given a random number at the start of the game.
+          1) You will be given a random number at the start of the game called Target Score.
           <br>
           2) There are 4 crystals on the page. Each crystal is assigned an amount of points that is not displayed to
           you.
           <br>
-          3) By clicking on a crystal you will add that assigned amount of points to your total score.
+          3) By clicking on a crystal you will add that assigned amount of points to your Current Score.
           <br>
-          4) You win the game by matching your total score to the random number given to you at the beginning of the
+          4) You win the game by matching your Current Score to the Target Score given to you at the beginning of the
           game.
           <br>
-          5) You lose the game if your total score goes above that number.
+          5) You lose the game if your Current Score goes above that number.
           <br>
           6) Each time the game starts over, the value of the crystals will be changed.
         </div>
@@ -61,23 +61,42 @@
     </div>
   </div>
 
-
-  
-  <h2 id="tarScore"></h2>
-  <h2 id="currScore"></h2>
-  <h3 id="wins"></h3>
-  <h3 id="losses"></h3>
-
-  <img src="assets/images/blue-gem.png" id="blueGem" class="gem">
-  <img src="assets/images/green-gem.png" id="greenGem" class="gem">
-  <img src="assets/images/pink-gem.png" id="redGem" class="gem">
-  <img src="assets/images/purple-gem.png" id="purpGem" class="gem">
-
-
+  <div class="container" id="firstRow">
+    <div class="row">
+      <div class="col-lg-6">
+        <h1 id="tarScore"></h1>
+      </div>
+      <div class="col-lg-6">
+        <h2 id="wins"></h2>
+        <h2 id="losses"></h2>
+      </div>
+    </div>
+  </div>
 
 
+  <div class="container" id="secondRow">
+    <div class="row">
+      <div class="div col-lg-3">
+        <img src="assets/images/blue-gem.png" id="blueGem" class="gem">
+      </div>
+      <div class="div col-lg-3">
+        <img src="assets/images/green-gem.png" id="greenGem" class="gem">
+      </div>
+      <div class="div col-lg-3">
+        <img src="assets/images/pink-gem.png" id="redGem" class="gem">
+      </div>
+      <div class="div col-lg-3">
+        <img src="assets/images/purple-gem.png" id="purpGem" class="gem">
+      </div>
+    </div>
 
-
+    <div class="container" id="thirdRow">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 id="currScore"></h2>
+        </div>
+      </div>
+    </div>
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -91,7 +110,5 @@
   </script>
   <script src="assets/javascript/game.js"></script>
 </body>
-
-
 
 </html>
