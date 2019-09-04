@@ -2,10 +2,12 @@
     max-width: 200px
 }
 body {
-    background-image: url("/assets/images/jem.jpg");
+    background-image: url("../images/jem.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     background-color: #cccccc;
+    max-width: 100%;
+    height: auto;
 }
 .jumbotron {
     background-color: transparent;
@@ -20,7 +22,6 @@ body {
 .btn-primary {
     background-color: purple;
     border-color: purple;
-    
 }
 #firstRow, #secondRow, #thirdRow {
     background: transparent;
