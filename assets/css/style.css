@@ -1,5 +1,13 @@
 .gem {
-    max-width: 200px
+    max-width: 200px;
+    overflow: hidden;
+    transition-duration: 0.8s;
+    transition-property: transform;
+}
+
+.gem:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
 }
 body {
     background-image: url("../images/jem.jpg");
