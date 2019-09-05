@@ -19,9 +19,10 @@ body {
     clear: both;
     text-align: center;
 }
-.btn-primary {
-    background-color: purple;
-    border-color: purple;
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary {
+    background-color: purple !important;
+    border-color: purple !important;
+    box-shadow: none !important;
 }
 #firstRow, #secondRow, #thirdRow {
     background: transparent;
